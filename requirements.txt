@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+statsmodels
+seaborn
+matplotlib
+fastapi
+uvicorn
+streamlit
+pmdarima
+pykalman
+ruptures
+python-dotenv

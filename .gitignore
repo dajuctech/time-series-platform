@@ -1,0 +1,33 @@
+
+---
+
+## 📄 `.gitignore`
+
+```gitignore
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# Environment files
+.env
+.venv/
+*.env
+
+# Jupyter output
+*.ipynb
+
+# Data
+data/raw/
+data/processed/
+
+# Models
+*.pkl
+*.h5
+models/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
