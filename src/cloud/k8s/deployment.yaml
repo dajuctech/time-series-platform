@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-series-api
+  labels:
+    app: time-series-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: time-series-api
+  template:
+    metadata:
+      labels:
+        app: time-series-api
+    spec:
+      containers:
+      - name: time-series-container
+        image: your-dockerhub-username/time-series-api:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: MODEL_PATH
+          value: "/app/models/arima_model.pkl"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: time-series-service
+spec:
+  selector:
+    app: time-series-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer
