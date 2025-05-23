@@ -1,9 +1,3 @@
-
----
-
-## 📄 `.gitignore`
-
-```gitignore
 # Byte-compiled / cache
 __pycache__/
 *.py[cod]
@@ -31,3 +25,7 @@ models/
 
 # VSCode
 .vscode/
+
+# Microsoft Word documents
+*.doc
+*.docx
